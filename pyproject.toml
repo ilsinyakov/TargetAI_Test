@@ -1,0 +1,27 @@
+[project]
+name = "targetai_test"
+version = "0.1.0"
+description = "Автотесты для TargetAI с использованием Pytest, Playwright, Allure, Page Object Model"
+requires-python = ">=3.10"
+dependencies = [
+    "pytest",
+    "playwright",
+    "allure-pytest",
+    "python-dotenv",
+    "faker"
+]
+
+[tool.ruff]
+line-length = 120
+# Group violations by containing file.
+output-format = "grouped"
+# Enable preview features.
+preview = true
+# Enumerate all fixed violations.
+show-fixes = true
+
+[tool.ruff.lint]
+select = ["E", "W", "F", "I", "N", "B", "Q", "ANN", "RET", "SLF", "SIM", "UP", "COM", "PL", "PERF", "RUF"]
+
+[tool.pytest.ini_options]
+addopts = "--alluredir=allure-results"
