@@ -4,7 +4,7 @@ import allure
 from faker import Faker
 from playwright.sync_api import Page
 
-from config import URL
+from config import LOGIN_URL
 from pages.agents_page import AgentsPage
 from pages.login_page import LoginPage
 
@@ -16,7 +16,7 @@ def test_add_agent(page: Page) -> None:
     instruction = "Автоматизированный агент для тестирования функционала добавления."
 
     with allure.step("Открыть страницу логина"):
-        page.goto(URL)
+        page.goto(LOGIN_URL)
     login_page = LoginPage(page)
     login = os.getenv("LOGIN")
     password = os.getenv("PASSWORD")

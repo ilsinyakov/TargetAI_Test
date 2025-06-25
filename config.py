@@ -1,1 +1,2 @@
-URL = "https://app.targetai.ai/login"
+BASE_URL = "https://app.targetai.ai"
+LOGIN_URL = BASE_URL + "/login"

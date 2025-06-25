@@ -22,5 +22,6 @@ def browser() -> Generator[Browser, None, None]:
 def page(browser: Browser) -> Generator[Page, None, None]:
     context = browser.new_context()
     page = context.new_page()
+    page.set_default_timeout(15000)  # 15 секунд
     yield page
     context.close()
