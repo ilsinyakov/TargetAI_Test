@@ -68,7 +68,7 @@ pytest
 
 ### 7. Просмотр отчёта Allure
 
-Allure должен быть установлен в системе.
+Allure должен быть установлен в системе.  
 [Документация Allure](https://allurereport.org/docs/)
 ```sh
 allure serve allure-results
